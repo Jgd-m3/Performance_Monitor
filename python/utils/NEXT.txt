@@ -1,0 +1,28 @@
+~ TAREAS QUE REALIZAR ~
+
+1º.     La librería platform para extraer datos del ordenador como Procesador y SO
+                (verificar excepciones y SO que dan resultados)
+1ºb.    La librería psutil para extraer la performance del pc
+                (controlar excepciones)
+
+
+2º.     Analizar y estudiar el acceso a los datos de cada ordenador,							// DONE
+    un tipo de registro/login se vuelve necesario
+
+
+
+3º.     Investigar acerca del autorun del programa al iniciar el SO
+    - verificar la conexion a internet ya que es elemental
+
+
+
+4º.     URGENTE: se necesita un api para insertar registros a la BBDD mediante php  			//CANCEL
+
+
+
+
+5*.		Convertir a singleton el Objeto Conexion 
+		ojo que es un objeto compartido por los hilos (Synchronized)
+
+
+6*.		Pasar el archivo de .txt a .bin
