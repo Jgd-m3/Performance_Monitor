@@ -15,7 +15,23 @@ class DataBase:
             self.conn = pymysql.connect(host = DataBase._host, user=DataBase._usr,
                     passwd =DataBase._psw, db = DataBase._db)
 
-    
+     """
+    _usr = 'managex'
+    _psw = 'M1dTYG73Fl'
+    _host = 'localhost'
+    _port = 3306
+    _db = 'tfc_monitor'
+
+    def __init__(self):
+        self.conn = None
+
+    def get_connection(self):
+        if self.conn is None:
+            self.conn = pymysql.connect(host = DataBase._host, port = DataBase._port, user=DataBase._usr,
+                    passwd =DataBase._psw, db = DataBase._db)
+
+        END OF TEMPORARY DB DATA
+    """
     def insert_into(self, query):
         num = 0
         if query is None or len(query) == 0:
