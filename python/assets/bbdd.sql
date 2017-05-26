@@ -1,7 +1,8 @@
 CREATE TABLE users (
-  id      INTEGER AUTO_INCREMENT PRIMARY KEY,
-  nick    VARCHAR(20) UNIQUE, --MUST BE UNIQUE
-  pass    VARCHAR(20)
+  id          INTEGER AUTO_INCREMENT PRIMARY KEY,
+  username    VARCHAR(20) UNIQUE, 
+  password    VARCHAR(20),
+  role        VARCHAR(10) DEFAULT 'USER'
 );
 
 CREATE TABLE pcs (
@@ -35,7 +36,7 @@ CREATE TABLE cpu_stat (
 );
 CREATE TABLE cpu_details_stat (
   ref_pc    INTEGER AUTO_INCREMENT REFERENCES pcs(id),
-  num_cpu   INT(2),
+  num_cpu   INT(3),
   user_us   DOUBLE,
   sys_us    DOUBLe,
   unused    DOUBLE,

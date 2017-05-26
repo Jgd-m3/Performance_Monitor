@@ -58,6 +58,6 @@ class Disk(threading.Thread):
 
         rtn = []
         for n in psutil.disk_partitions(True):
-            if n[3].find('fixed') != -1:
-                rtn.append(n[0]+'\\')
+            if (n.opts).find('fixed') != -1 or (n.opts).find('local') != -1:
+                rtn.append(n.mountpoint)
         return rtn

@@ -14,7 +14,7 @@ def main():
     user = User_pers.User(r'User.txt').give_me_uid()
     print(user)
     pc = insert_base_data(user)
-    
+    """
     hiloCpu = cpu_script.Cpu(args=(pc), daemon= True)
     hiloRam = ram_script.Ram(args=(pc), daemon= True)
     hiloDisk = disc_script.Disk(args=(pc), daemon=True)
@@ -29,7 +29,7 @@ def main():
     hiloRam.join()
     hiloDisk.join()
     hiloNet.join()
-    
+    """
     print('han terminao los daemons')
 
 
@@ -45,6 +45,7 @@ def insert_base_data(user):
 
     print('terminó shuprimo')
     return id_pc
+
 
 if __name__ == '__main__':
     main()

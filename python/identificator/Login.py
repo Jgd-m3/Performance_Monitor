@@ -1,6 +1,7 @@
 
 from tkinter import Tk, messagebox
 from identificator import Window
+import time
 #parte grafica de la app que pide registro o login
 
 class login():
@@ -25,6 +26,8 @@ class login():
 			root.withdraw()
 			answer = messagebox.askyesno('Question?', 'Have you got an Account??')
 			root.destroy()
+
+			time.sleep(0.2)
 			Window.My_window(self, login = answer)
 
 			idd = self.select_user(self.usr, self.pwd, self.id)

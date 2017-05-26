@@ -9,9 +9,8 @@ from utils import Connection
 
 class My_window:
 
-	#definir la funcion que llamaremos
+	
 	def ok_button(self):
-		#TO-DO EVERYTHING TO LOGIN THE USR
 		
 		usr, pwd = self.are_input_correct()
 		uid = None
@@ -37,8 +36,8 @@ class My_window:
 
 
 	def login_select(self, usr, pwd):
-		#pwd sera last_name en la bbdd del curro
-		select = "select id from users where nick = '{}' and pass = '{}'".format(usr,pwd)
+
+		select = "select id from users where username = '{}' and password = '{}'".format(usr,pwd)
 		
 		conn = Connection.DataBase()
 		try:
@@ -52,7 +51,7 @@ class My_window:
 		
 
 	def signup_insert(self, usr, pwd):
-		query = "insert into users(nick, pass) values('{}', '{}')".format(usr,pwd)
+		query = "insert into users(username, password) values('{}', '{}')".format(usr,pwd)
 		num = 0
 		conn = Connection.DataBase()
 		try:
@@ -80,6 +79,7 @@ class My_window:
 	def __init__(self, parent, login = False):
 		#creamos ventana
 		self.window = Tk()
+		self.window.transient()
 		self.parent = parent
 		self.mode = login
 		#tamanyo('ancho x alto + posx + posy')
@@ -88,8 +88,8 @@ class My_window:
 		self.window.title(str_mode)
 
 		#etiqueta grid(fila y columna)
-		lbl_usr = Label(self.window, text='Usuario: ').grid(row= 2, column =2, sticky=W)
-		lbl_pwd = Label(self.window, text='Password: ').grid(row=4, column=2, sticky=W)
+		lbl_usr = Label(self.window, text='User: ').grid(row= 2, column =2, sticky=W)
+		lbl_pwd = Label(self.window, text='Pass: ').grid(row=4, column=2, sticky=W)
 
 
 		#txtfield

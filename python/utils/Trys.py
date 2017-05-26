@@ -97,10 +97,13 @@ print('d: - {}'.format(psutil.disk_usage('d:\\')))
 """
 
 print('.................................')
-
-con = pymysql.connect(host = 'iesmaestre.sytes.net', user='monitor',
+"""
+ con = pymysql.connect(host = 'iesmaestre.sytes.net', user='monitor',
                     passwd ='TFC_Monitor_2017!', db = 'tfc_monitor')
+"""
 
+con = pymysql.connect(host = '127.0.0.1', user='managex1',
+                    passwd ='M1dTYG73Fl', db = 'tfc_monitor')
 cursor = con.cursor()
 cursor.execute('select * from ram_stat')
 for x in cursor.fetchall():

@@ -1,5 +1,5 @@
 from uuid import getnode as get_mac
-import psutil, socket, platform
+import psutil, socket, platform, ssl
 from psutil import cpu_count as num_cpus
 from urllib.request import urlopen
 from json import load
@@ -16,19 +16,18 @@ class Base:
                                                                                      self.pc_name)
 
         conn.insert_into(sql)
-        print('sql 1: {}'.format(sql))
+       
         sql = "select id from pcs where ref_user={} and mac = '{}' and pc_name = '{}'".format(
                                                                                     self.num_user, self.mac, self.pc_name)
         rlt = conn.get_unique_id(sql)
-        print('sql 2: {}'.format(sql))
+
         sql = "INSERT INTO pc_data VALUES({}, {},'{}',{},{},'{}','{}', {}, '{}','{}')".format(
                 rlt, self.memory, self.cpu_name, self.cores, self.threads, self.so, self.so_name,
                 self.hdd, self.ip_priv, self.ip_pub)
         conn.insert_into(sql)
-        print('sql 3: {}'.format(sql))
+        
         conn.close_connection()
 
-        print('rlt: {}'.format(rlt))
         return rlt
 
     def update_pc(self, n_pc):
@@ -63,7 +62,8 @@ class Base:
         self.so_name = platform.platform()
         self.hdd = self.get_hd_size()
         self.mac = self.get_mac_format(hex(get_mac()))
-        self.ip_pub = load(urlopen('http://jsonip.com'))['ip']
+        context = ssl._create_unverified_context()
+        self.ip_pub = load(urlopen('http://jsonip.com', context=context))['ip']
 
     def need_update(self):
         return True
@@ -83,8 +83,9 @@ class Base:
 
         rdo = 0
         for n in psutil.disk_partitions():
-            if n[3].find('fixed') != -1:
-                rdo += int(psutil.disk_usage(n[0] + '\\').total)
+            if (n.opts).find('fixed') != -1 or (n.opts).find('local') != -1:
+
+                rdo += int(psutil.disk_usage(n.mountpoint).total)
         return rdo
 
     def get_mac_format(self, input):

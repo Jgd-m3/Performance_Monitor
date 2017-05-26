@@ -1,13 +1,31 @@
 import socket, psutil
 from urllib.request import urlopen
 from json import load
+import pymysql
+import ssl
 
-import utils.Base_monitor as bs
+# This restores the same behavior as before.
+import ssl
 
-
-
+# This restores the same behavior as before.
 
 """
+a = psutil.disk_partitions()
+arr = []
+for i in a:
+	if (i.opts).find('local') != -1:
+		arr.append(i.mountpoint)
+		print (i)
+
+for j in arr:
+	print(psutil.disk_usage(j))
+
+
+
+b = psutil.disk_usage('/')
+print ('nanana' + str(b))
+
+
 a = bs.Base(3)
 print('aaaaaa')
 id= a.get_data_id()
@@ -26,11 +44,12 @@ direc = socket.gethostbyname(n)
 
 print(n)
 print(direc)
+
 """
+context = ssl._create_unverified_context()
+b =  load(urlopen('http://jsonip.com', context=context))['ip']
 
-b =  load(urlopen('http://jsonip.com'))['ip']
-
-print(type(load(urlopen('http://jsonip.com'))['ip']))
+# print(type(load(urlopen('https://api.ipify.org?format=json'))['ip']))
 print(b)
 
 """
@@ -44,4 +63,16 @@ def get_hd_size():
 print(get_hd_size())
 print(psutil.disk_usage('C:\\').total)
 
+
+con = pymysql.connect(host = '192.168.1.81', user='managex',
+                    passwd ='M1dTYG73Fl', db = 'tfc_monitor')
+
+cursor = con.cursor()
+cursor.execute('select * from ram_stat')
+for x in cursor.fetchall():
+    print(x)
+
+
+cursor.close()
+con.close()
 """
