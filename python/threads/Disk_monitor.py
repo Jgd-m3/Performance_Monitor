@@ -53,11 +53,10 @@ class Disk(threading.Thread):
         return ", ".join(values)
 
 
-
     def get_hds(self):
 
         rtn = []
         for n in psutil.disk_partitions(True):
             if (n.opts).find('fixed') != -1 or (n.opts).find('local') != -1:
-                rtn.append(n.mountpoint)
+                rtn.append(n.mountpoint.replace('\\', '/'))
         return rtn

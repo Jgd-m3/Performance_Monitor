@@ -85,7 +85,7 @@ class Base:
         for n in psutil.disk_partitions():
             if (n.opts).find('fixed') != -1 or (n.opts).find('local') != -1:
 
-                rdo += int(psutil.disk_usage(n.mountpoint).total)
+                rdo += int(psutil.disk_usage(n.mountpoint.replace('\\','/')).total)
         return rdo
 
     def get_mac_format(self, input):

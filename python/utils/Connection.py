@@ -1,7 +1,7 @@
 import pymysql, traceback
 
 class DataBase:
-    """
+
     _usr = 'monitor'
     _psw = 'TFC_Monitor_2017!'
     _host = 'iesmaestre.sytes.net'
@@ -29,6 +29,7 @@ class DataBase:
             self.conn = pymysql.connect(host = DataBase._host, user=DataBase._usr,
                     passwd =DataBase._psw, db = DataBase._db)
 
+    """
    
     def insert_into(self, query):
         num = 0
