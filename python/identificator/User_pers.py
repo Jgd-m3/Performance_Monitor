@@ -2,7 +2,6 @@
 import os.path as path
 from identificator import Login
 
-
 class User:
 
 	def give_me_uid(self):
