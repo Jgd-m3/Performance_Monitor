@@ -8,9 +8,16 @@ from utils import Connection
 
 
 class My_window:
+	"""
+	class My Window to sign up or login the first time that you use this program
+	"""
 
 	
 	def ok_button(self):
+		"""
+		method to execute when the button Ok is pressed
+		:return: 
+		"""
 		
 		usr, pwd = self.are_input_correct()
 		uid = None
@@ -36,6 +43,12 @@ class My_window:
 
 
 	def login_select(self, usr, pwd):
+		"""
+		method to search the user from the DB
+		:param usr: username string
+		:param pwd: password string
+		:return: user id
+		"""
 
 		select = "select id from users where username = '{}' and password = '{}'".format(usr,pwd)
 		
@@ -51,6 +64,12 @@ class My_window:
 		
 
 	def signup_insert(self, usr, pwd):
+		"""
+		method to sign up a new user, in the DB
+		:param usr: username 
+		:param pwd: password of the user
+		:return: number of rows inserted, it should be 1
+		"""
 		query = "insert into users(username, password) values('{}', '{}')".format(usr,pwd)
 		num = 0
 		conn = Connection.DataBase()
@@ -64,12 +83,23 @@ class My_window:
 		return num
 
 	def are_input_correct(self):
+		"""
+		method to comprove the inputs, returning a tuple with the username and password
+		:return: tuple (username, password)
+		"""
+
 		name_user = self.check_this_input(self.entrada_usr, 100)
 		pass_user = self.check_this_input(self.entrada_pwd, 100)
 
 		return name_user,pass_user
 
 	def check_this_input(self, inp, max_len):
+		"""
+		auxiliar method to check the input data length
+		:param inp: input box object
+		:param max_len: length max
+		:return: string with the content of the input, or None
+		"""
 		st = inp.get()
 		st = st.strip()
 		return st if len(st) > 0 and len(st) < max_len else None
@@ -77,6 +107,11 @@ class My_window:
 
 	# atributes : window, parent, mode, entrada_usr entrada_pwd
 	def __init__(self, parent, login = False):
+		"""
+		Constructor of My_window
+		:param parent: the object that create the window
+		:param login: boolean to know if it's a new user or a registered user
+		"""
 		#creamos ventana
 		self.window = Tk()
 		self.window.transient()

@@ -1,13 +1,18 @@
-
 from tkinter import Tk, messagebox
 from identificator import Window
 import time
-#parte grafica de la app que pide registro o login
+
 
 class login():
-
+	"""
+	Class Login to get the user ID, name and pw and save it in a file
+	"""
 
 	def __init__(self, path):
+		"""
+		constructor
+		:param path: 
+		"""
 		self.path = path
 		self.usr = None
 		self.pwd = None

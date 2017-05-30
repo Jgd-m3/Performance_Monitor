@@ -89,3 +89,12 @@ CREATE TABLE net_details_stat (
   date_stat   DATETIME,
   CONSTRAINT PRIMARY KEY (ref_pc,type_net,date_stat)
 );
+
+
+CREATE TABLE process(
+  ref_pc      INTEGER REFERENCES pcs(id),
+  pid        INTEGER,
+  proc_name   VARCHAR(80),
+  date_stat   DATETIME,
+  CONSTRAINT  PRIMARY KEY (ref_pc, pid, date_stat)
+);

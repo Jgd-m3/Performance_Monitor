@@ -2,11 +2,11 @@
 
 import psutil, codecs, platform, pymysql, time
 import urllib.request
-
+"""
 nanana = codecs.open('rdo_net.txt', 'a', 'utf-8')
 # nanana.write(codecs.BOM_UTF8)
 
-"""
+
 count1 = psutil.net_io_counters()
 print(count1)
 nanana.write('METHOD: net_io_counters(False) ------------------------ \n')
@@ -100,7 +100,7 @@ print('.................................')
 """
  con = pymysql.connect(host = 'iesmaestre.sytes.net', user='monitor',
                     passwd ='TFC_Monitor_2017!', db = 'tfc_monitor')
-"""
+
 
 con = pymysql.connect(host = '127.0.0.1', user='managex1',
                     passwd ='M1dTYG73Fl', db = 'tfc_monitor')
@@ -112,3 +112,12 @@ for x in cursor.fetchall():
 
 cursor.close()
 con.close()
+"""
+
+
+cosa = psutil.process_iter()
+
+print(cosa.__str__())
+
+for i in cosa:
+    print(i.name())
