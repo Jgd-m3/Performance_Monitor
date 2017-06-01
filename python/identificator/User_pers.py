@@ -1,5 +1,5 @@
 #test guardar usuario en archivo .txt
-import os.path as path
+import os.path as path, base64
 from identificator import Login
 
 class User:
@@ -15,24 +15,26 @@ class User:
 		"""
 
 		if not path.exists(self.file_string):
-			nana = Login.login(self.file_string)
-			nana.register_user()
+			log = Login.login(self.file_string)
+			log.register_user()
 
-		data =[]
+		with open(self.file_string, 'rb') as file_input:
+			# file_input.seek(0)
+			# header = file_input.read(22)    # I don't use the header yet
+			file_input.seek(22)
 
-		with open(self.file_string, 'r') as file_input:
+			uid = file_input.read(16)
+			recovered_uid = int.from_bytes(uid, byteorder='big', signed=True)
 
-			for i, line in enumerate(file_input):
-				if i == 0:
-					print('la cabecera es: {}'.format(line))
-				if i == 1:
-					data.append(int(line))
-				if i == 2 or i == 3:
-					data.append(str(line).strip())
+			user = base64.decodebytes(file_input.read(175))
+			usr_decode = user.decode('utf-8').strip('*')
+			pwd = base64.decodebytes(file_input.read(175))
+			pwd_decode = pwd.decode('utf-8').strip('x')
 
-		print('id:{}\nuser:{}\npass:{}'.format(data[0],data[1],data[2]))
+		print('id:{}\nuser:{}\npass:{}'.format(recovered_uid,usr_decode,pwd_decode))
 
-		return int(data[0])
+		return recovered_uid
+
 
 	def __init__(self, path):
 		"""

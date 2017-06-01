@@ -4,7 +4,7 @@ import threads.Cpu_monitor as cpu_script
 import threads.Ram_monitor as ram_script
 import threads.Disk_monitor as disk_script
 import threads.Network_monitor as net_script
-import threads.Process as proc_script
+import threads.Process_monitor as proc_script
 
 
 
@@ -12,8 +12,9 @@ def main():
 
     """Method Main, entry to start program"""
 
-    user = User_pers.User(r'User.txt').get_uid()
+    user = User_pers.User(r'User.m3').get_uid()
     print(user)
+
     pc = insert_base_data(user)
 
     hiloCpu = cpu_script.Cpu(args=(pc), name='cpu_monitor', daemon= True)

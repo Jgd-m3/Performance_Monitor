@@ -50,12 +50,12 @@ for y in lala:
     print(y)
 
 """
-print(platform.processor()) # tipo de procesador
+# print(platform.processor()) # tipo de procesador
 # print(platform.machine()) # tipo maquina
 # print(platform.architecture())
-print(platform.system())
+# print(platform.system())
 # print(platform.version())
-print(platform.platform())
+# print(platform.platform())
 # print(platform.release())
 # print(platform.uname())
 
@@ -112,7 +112,7 @@ for x in cursor.fetchall():
 
 cursor.close()
 con.close()
-"""
+
 
 
 cosa = psutil.process_iter()
@@ -121,3 +121,78 @@ print(cosa.__str__())
 
 for i in cosa:
     print(i.name())
+"""
+
+
+#WRITING THE FILE
+import base64
+
+nana = open('testbyte.aa', 'wb')
+
+cabesera = '[Cabesera Cabesona]:m3'.encode('utf-8')
+print(len(cabesera))
+
+
+uid = 15
+
+uid_bin = uid.to_bytes(16, byteorder='big', signed=True) #tamaño de la cantidad de bytes(16 en el que codificamos un numero)
+
+
+name = 'nombresito'
+bin_name = name.encode('utf-8')
+bin_name_array =bytearray(bin_name)
+
+while( len(bin_name_array)< 200):
+    bin_name_array.insert(0, ord('*'))
+
+
+password = 'paszzZZZzZzzzzworsitomio!!AAA'
+bin_pwd = password.encode('utf-8')
+bin_pwd_array = bytearray(bin_pwd)
+
+
+while(len(bin_pwd_array) < 128):
+    bin_pwd_array.insert(0, ord('X'))
+"""
+nana.write(cabesera)
+nana.write(uid_bin)
+nana.write(bin_name_array)
+"""
+
+code64  = base64.encodebytes(bin_pwd_array)
+
+print(len(bin_pwd_array))
+print(len(code64))
+
+nana.write(code64)
+nana.close()
+#READING FILE:
+
+nanana = open('testbyte.aa', 'rb')
+st = nanana.read(203)
+print(base64.decodebytes(st).decode('utf-8').strip('X'))
+nanana.close()
+"""
+#cabesera size = 22
+nanana.seek(0)
+cabesera = nanana.read(22)
+
+print(cabesera.decode('utf-8'))
+uid = nanana.read(16)
+recovered_uid= int.from_bytes(uid, byteorder='big', signed=True)
+print(recovered_uid)
+# nanana.seek(38)
+user = nanana.read(200)
+print(user.decode('utf-8').strip('*'))
+pwd = nanana.read(200)
+print(pwd.decode('utf-8').strip('X'))
+
+nanana.close()
+
+recovered_uid= int.from_bytes(uid_bin, byteorder='big', signed=True) #decodificacion de los bytes en integer
+print(recovered_uid)
+
+print(bin_array)
+text = bin_array.decode('utf-8').strip()
+print(text)
+"""
