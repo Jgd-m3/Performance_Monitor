@@ -13,9 +13,9 @@ class User:
 		Method to get the user ID
 		:return: user ID
 		"""
+		log = Login.Login(self.file_string)
 
 		if not path.exists(self.file_string):
-			log = Login.login(self.file_string)
 			log.register_user()
 
 		with open(self.file_string, 'rb') as file_input:
@@ -32,8 +32,9 @@ class User:
 			pwd_decode = pwd.decode('utf-8').strip('x')
 
 		print('id:{}\nuser:{}\npass:{}'.format(recovered_uid,usr_decode,pwd_decode))
+		select_uid = log.select_user(usr_decode, pwd_decode)
 
-		return recovered_uid
+		return recovered_uid if select_uid == recovered_uid else None
 
 
 	def __init__(self, path):

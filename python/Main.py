@@ -5,16 +5,21 @@ import threads.Ram_monitor as ram_script
 import threads.Disk_monitor as disk_script
 import threads.Network_monitor as net_script
 import threads.Process_monitor as proc_script
-
+import os
 
 
 def main():
 
     """Method Main, entry to start program"""
-
-    user = User_pers.User(r'User.m3').get_uid()
+    user = None
+    looper_corrupt = 0
+    while user is None or user < 0:
+        user = User_pers.User(r'User.m3').get_uid()
+        looper_corrupt += 1
+        if looper_corrupt > 10 and ( user is None or user < 0):
+            os.remove(r'User.m3')
     print(user)
-
+    """
     pc = insert_base_data(user)
 
     hiloCpu = cpu_script.Cpu(args=(pc), name='cpu_monitor', daemon= True)
@@ -34,6 +39,7 @@ def main():
     hiloDisk.join()
     hiloNet.join()
     hiloProc.join()
+    """
     print('han terminao los daemons')
 
 
