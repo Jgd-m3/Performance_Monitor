@@ -57,15 +57,11 @@ class Net(threading.Thread):
         Method to run the thread
         :return: 
         """
-        self.db.get_connection()
-
         for i in range(10):
             t = time.strftime("%Y/%m/%d %H:%M:%S")
             self.save_data(psutil.net_io_counters(), t)
             self.save_nets_data(self.prepare_values(psutil.net_io_counters(True), t))
             time.sleep(1.5)         # TO-DO: change to 5mins
-
-        self.db.close_connection()
 
 
     def prepare_values(self, data, date):

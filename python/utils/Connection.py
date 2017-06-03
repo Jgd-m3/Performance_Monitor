@@ -1,76 +1,90 @@
 import pymysql, traceback
 
+
 class DataBase:
 
-    _usr = 'monitor'
-    _psw = 'TFC_Monitor_2017!'
-    _host = 'iesmaestre.sytes.net'
-    _db = 'tfc_monitor'
+    __instance = None
 
-    def __init__(self):
-        self.conn = None
+    def __new__(cls, *args, **kwargs):
+        if cls.__instance is None:
+            cls.__instance = cls.__DataBase_Instance()
+        return cls.__instance
 
-    def get_connection(self):
-        if self.conn is None:
-            self.conn = pymysql.connect(host = DataBase._host, user=DataBase._usr,
-                    passwd =DataBase._psw, db = DataBase._db)
 
-    """
-    _usr = 'managex'
-    _psw = 'M1dTYG73Fl'
-    _host = '192.168.1.81'
-    _db = 'tfc_monitor'
+    class __DataBase_Instance:
 
-    def __init__(self):
-        self.conn = None
+        _usr = 'monitor'
+        _psw = 'TFC_Monitor_2017!'
+        _host = 'iesmaestre.sytes.net'
+        _db = 'tfc_monitor'
 
-    def get_connection(self):
-        if self.conn is None:
-            self.conn = pymysql.connect(host = DataBase._host, user=DataBase._usr,
-                    passwd =DataBase._psw, db = DataBase._db)
+        def __init__(self):
+            self.conn = None
 
-    """
-   
-    def insert_into(self, query):
-        num = 0
-        if query is None or len(query) == 0:
-            return 
-        try:
-            with self.conn.cursor() as cursor:
-                num = cursor.execute(query)
-                self.conn.commit()
-        except:
-            traceback.print_exc()
-        finally:
-            return num
+        def __get_connection(self):
+            self.conn = pymysql.connect(host = self._host, user=self._usr,
+                    passwd = self._psw, db = self._db)
 
-    def get_unique_id(self, query):
-        if query is None or len(query) == 0:
-            return False
+        """
+        _usr = 'managex'
+        _psw = 'M1dTYG73Fl'
+        _host = '192.168.1.81'
+        _db = 'tfc_monitor'
+    
+        def __init__(self):
+            self.conn = None
+    
+        def get_connection(self):
+            if self.conn is None:
+                self.conn = pymysql.connect(host = DataBase._host, user=DataBase._usr,
+                        passwd =DataBase._psw, db = DataBase._db)
+    
+        """
 
-        try:
-            with self.conn.cursor() as cursor:
-                cursor.execute(query)
-                rtn = cursor.fetchone()[0]
-        except:
-            rtn = None
-        finally:
-            pass
+        def insert_into(self, query):
+            self.__get_connection()
+            num = 0
+            if query is None or len(query) == 0:
+                return
+            try:
+                with self.conn.cursor() as cursor:
+                    num = cursor.execute(query)
+                    self.conn.commit()
+            except:
+                traceback.print_exc()
+            finally:
+                self.__close_connection()
+                return num
 
-        return rtn
+        def get_unique_id(self, query):
+            self.__get_connection()
+            if query is None or len(query) == 0:
+                return False
 
-    def get_data(self, query):
-        if query is None or len(query) == 0:
-            return False
+            try:
+                with self.conn.cursor() as cursor:
+                    cursor.execute(query)
+                    rtn = cursor.fetchone()[0]
+            except:
+                rtn = None
+            finally:
+                self.__close_connection()
 
-        try:
-            with self.conn.cursor() as cursor:
-                cursor.execute(query)
-                rtn = cursor.fetchall()
-        finally:
-            pass
+            return rtn
 
-        return rtn
+        def get_data(self, query):
+            self.__get_connection()
+            if query is None or len(query) == 0:
+                return False
 
-    def close_connection(self):
-        self.conn.close()
+            try:
+                with self.conn.cursor() as cursor:
+                    cursor.execute(query)
+                    rtn = cursor.fetchall()
+            finally:
+                self.__close_connection()
+
+            return rtn
+
+        def __close_connection(self):
+            self.conn.close()

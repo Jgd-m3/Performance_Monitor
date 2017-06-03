@@ -73,10 +73,8 @@ class Base:
                                                                                 self.mac, self.pc_name )
 
         conn = Connection.DataBase()
-        conn.get_connection()
 
         id_pc = conn.get_unique_id(sql)
-        conn.close_connection()
         return id_pc
 
     def get_hd_size(self):

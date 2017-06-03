@@ -43,11 +43,9 @@ class Ram(threading.Thread):
         method to run the thread
         :return: 
         """
-        self.db.get_connection()
 
         for i in range(10):
             t = time.strftime("%Y/%m/%d %H:%M:%S")
             self.save_data(psutil.virtual_memory(), t)
             time.sleep(1.5)      # TO-DO: sleep for 1 min
 
-        self.db.close_connection()

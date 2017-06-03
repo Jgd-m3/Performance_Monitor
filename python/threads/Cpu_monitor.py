@@ -52,8 +52,6 @@ class Cpu(threading.Thread):
         """
         Method to run the thread
         """
-        self.db.get_connection()
-
         for i in range(10):
             t = time.strftime("%Y/%m/%d %H:%M:%S")
             self.save_data(psutil.cpu_times(), psutil.cpu_percent(), t)
@@ -61,7 +59,6 @@ class Cpu(threading.Thread):
                                                         psutil.cpu_percent(None, True), t))
             time.sleep(1.5)      # TO-DO: sleep for 1 min
 
-        self.db.close_connection()
 
     def prepare_values(self, data, perc, date):
         """

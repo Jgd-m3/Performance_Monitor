@@ -3,8 +3,6 @@
 import sys
 from tkinter import *
 from tkinter import messagebox
-from utils import Connection, Encryptor
-
 
 
 class My_window:
@@ -26,67 +24,29 @@ class My_window:
 			messagebox.showinfo('ERROR', 'Refill properly the fields')
 			return
 
-
-
 		if self.mode: 
 			uid = self.parent.select_user(usr, pwd)
 		else: 
 			num = self.parent.signup_insert(usr, pwd)
 			if num > 0:
 				uid = self.parent.select_user(usr, pwd)
+			else:
+				uid = -3
 
 		if uid is None:
 			messagebox.showinfo('ERROR', 'Your user doesnt exist')
 			self.window.destroy()
-		elif uid < 0:
+		elif uid == -2:
 			messagebox.showinfo('ERROR', 'That password is incorrect')
 			self._clean_inputs()
+		elif uid == -3:
+			messagebox.showinfo('ERROR', 'That user is already registered')
+			self._clean_inputs(True)
 		else:
 			messagebox.showinfo('holis', 'Has logeao HDP > {} < '.format(usr))
 			self.parent.set_user_info(usr, pwd, uid)
 			self.window.destroy()
 
-
-	# def login_select(self, usr, pwd):
-	# 	"""
-	# 	method to search the user from the DB
-	# 	:param usr: username string
-	# 	:param pwd: password string
-	# 	:return: user id
-	# 	"""
-    #
-	# 	select = "select id, username, password from users where username = '{}'".format(usr)
-	#
-	# 	conn = Connection.DataBase()
-	# 	try:
-	# 		conn.get_connection()
-    #
-	# 		data = conn.get_data(select)[0]
-	#
-	# 	finally: conn.close_connection()
-    #
-    #
-	# 	return data[0] #de momento devolvemos el ID
-	#
-    #
-	# def signup_insert(self, usr, pwd):
-	# 	"""
-	# 	method to sign up a new user, in the DB
-	# 	:param usr: username
-	# 	:param pwd: password of the user
-	# 	:return: number of rows inserted, it should be 1
-	# 	"""
-	# 	query = "insert into users(username, password) values('{}', '{}')".format(usr,pwd)
-	# 	num = 0
-	# 	conn = Connection.DataBase()
-	# 	try:
-	# 		conn.get_connection()
-    #
-	# 		num = conn.insert_into(query)[0]
-	#
-	# 	finally: conn.close_connection()
-	#
-	# 	return num
 
 	def are_input_correct(self):
 		"""
@@ -110,7 +70,13 @@ class My_window:
 		st = st.strip()
 		return st if len(st) > 0 and len(st) < max_len else None
 
-	def _clean_inputs(self):
+	def _clean_inputs(self, nanana = False):
+		"""
+		Method to clean the pass field
+		:return: 
+		"""
+		if nanana:
+			self.txt_usr.delete(0,END)
 		self.txt_pwd.delete(0, END)
 
 	# atributes : window, parent, mode, entrada_usr entrada_pwd
@@ -137,13 +103,13 @@ class My_window:
 		#txtfield
 		self.entrada_usr = StringVar()
 		self.entrada_pwd = StringVar()
-		txt_usr = Entry(self.window, textvariable = self.entrada_usr).grid(row =2, column =3)
+		self.txt_usr = Entry(self.window, textvariable = self.entrada_usr)
 		self.txt_pwd = Entry(self.window, show = '*', textvariable = self.entrada_pwd)
+		self.txt_usr.grid(row =2, column =3)
 		self.txt_pwd.grid(row =4, column =3)
 
 		bnt_login = Button(self.window, text=str_mode, width=10, command=self.ok_button).grid(row=10, column=2)
 
-		#inicializamos el procesamiento - solo windows
 		self.window.mainloop()
 
 #end window

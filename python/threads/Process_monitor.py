@@ -37,15 +37,12 @@ class Process(threading.Thread):
         """
         Method to run the thread
         """
-        self.db.get_connection()
 
         for i in range(2):
             t = time.strftime("%Y/%m/%d %H:%M:%S")
             self.save_data(self.prepare_values(psutil.process_iter(), t))
 
             time.sleep(10)      # TO-DO: sleep for 30 min
-
-        self.db.close_connection()
 
 
     def prepare_values(self, data, date):

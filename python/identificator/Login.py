@@ -1,7 +1,7 @@
 from tkinter import Tk, messagebox
 from identificator import Window
 from utils import Connection, Encryptor
-import time, base64, bcrypt
+import time, base64
 
 
 class Login:
@@ -29,10 +29,9 @@ class Login:
 
 		conn = Connection.DataBase()
 		try:
-			conn.get_connection()
 			data = conn.get_data(select)
 		finally:
-			conn.close_connection()
+			pass
 
 		if len(data) == 0:
 			return None
@@ -53,15 +52,11 @@ class Login:
 		num = 0
 		conn = Connection.DataBase()
 		try:
-			conn.get_connection()
-
 			num = conn.insert_into(query)
-
 		finally:
-			conn.close_connection()
+			pass
 
 		return num
-
 
 
 	def register_user(self):
@@ -101,7 +96,6 @@ class Login:
 			file_output.write(uid_bin)
 			file_output.write(base64.encodebytes(bin_name_array))
 			file_output.write(base64.encodebytes(bin_pwd_array))
-
 
 
 	def set_user_info(self, usr, pwd, id):

@@ -45,8 +45,6 @@ class Disk(threading.Thread):
         method to run the thread
         :return: 
         """
-
-        self.db.get_connection()
         paths = self.get_hds()
 
         for i in range(10):
@@ -55,8 +53,6 @@ class Disk(threading.Thread):
             self.save_data(self.prepare_values(paths, t))
 
             time.sleep(3)  # TO-DO: sleep for 5 mins
-
-        self.db.close_connection()
 
 
     def prepare_values(self, paths, date):
