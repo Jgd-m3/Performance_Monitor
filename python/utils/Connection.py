@@ -1,4 +1,5 @@
 import pymysql, traceback
+from threading import Lock
 
 
 class DataBase:
@@ -18,10 +19,13 @@ class DataBase:
         _host = 'iesmaestre.sytes.net'
         _db = 'tfc_monitor'
 
+
         def __init__(self):
             self.conn = None
+            self.__locker = Lock()
 
         def __get_connection(self):
+            self.__locker.acquire()
             self.conn = pymysql.connect(host = self._host, user=self._usr,
                     passwd = self._psw, db = self._db)
 
@@ -54,7 +58,7 @@ class DataBase:
                 traceback.print_exc()
             finally:
                 self.__close_connection()
-                return num
+            return num
 
         def get_unique_id(self, query):
             self.__get_connection()
@@ -88,3 +92,5 @@ class DataBase:
 
         def __close_connection(self):
             self.conn.close()
+            self.__locker.release()
+

@@ -16,10 +16,10 @@ def main():
     while user is None or user < 0:
         user = User_pers.User(r'User.m3').get_uid()
         looper_corrupt += 1
-        if looper_corrupt > 10 and ( user is None or user < 0):
+        if looper_corrupt > 10 and (user is None or user < 0):
             os.remove(r'User.m3')
     print(user)
-    """
+
     pc = insert_base_data(user)
 
     hiloCpu = cpu_script.Cpu(args=(pc), name='cpu_monitor', daemon= True)
@@ -39,7 +39,7 @@ def main():
     hiloDisk.join()
     hiloNet.join()
     hiloProc.join()
-    """
+
     print('han terminao los daemons')
 
 

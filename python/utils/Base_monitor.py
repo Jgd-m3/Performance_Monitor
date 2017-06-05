@@ -10,7 +10,6 @@ class Base:
     def register_pc(self ):
         
         conn = Connection.DataBase()
-        conn.get_connection()
 
         sql = "Insert into pcs(ref_user, mac, pc_name) values({},'{}', '{}')".format(self.num_user, self.mac,
                                                                                      self.pc_name)
@@ -25,8 +24,7 @@ class Base:
                 rlt, self.memory, self.cpu_name, self.cores, self.threads, self.so, self.so_name,
                 self.hdd, self.ip_priv, self.ip_pub)
         conn.insert_into(sql)
-        
-        conn.close_connection()
+
 
         return rlt
 
@@ -35,7 +33,6 @@ class Base:
         if self.need_update():
 
             conn = Connection.DataBase()
-            conn.get_connection()
 
             sql = "UPDATE pc_data SET "
             sql += "ram = {}, cpu_name = '{}', cores = {}, threads = {}, so = '{}', so_v = '{}',".format(
@@ -44,7 +41,6 @@ class Base:
                 self.hdd, self.ip_priv, self.ip_pub)
             sql += 'where ref_pc = {}'.format(n_pc)
             conn.insert_into(sql)
-            conn.close_connection()
 
 
     def __init__(self, num_user):

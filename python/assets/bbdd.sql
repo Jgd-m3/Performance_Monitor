@@ -57,7 +57,7 @@ CREATE TABLE ram_stat (
 
 CREATE TABLE disk_stat (
   ref_pc      INTEGER AUTO_INCREMENT REFERENCES pcs(id),
-  disk_path   VARCHAR(7),
+  disk_path   VARCHAR(30),
   used        BIGINT,
   free        BIGINT,
   perc_us     DOUBLE,

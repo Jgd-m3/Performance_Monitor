@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="66f2f0d2-92c4-40d2-944a-cd913c74997e" name="Default" comment="" />
+    <list default="true" id="66f2f0d2-92c4-40d2-944a-cd913c74997e" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/PROYECTO_GITHUB_REPO.iml" afterPath="$PROJECT_DIR$/.idea/PROYECTO_GITHUB_REPO.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/python/Main.py" afterPath="$PROJECT_DIR$/python/Main.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/python/assets/bbdd.sql" afterPath="$PROJECT_DIR$/python/assets/bbdd.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/python/utils/Base_monitor.py" afterPath="$PROJECT_DIR$/python/utils/Base_monitor.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/python/utils/Connection.py" afterPath="$PROJECT_DIR$/python/utils/Connection.py" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,8 +28,8 @@
       <file leaf-file-name="Main.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/python/Main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="229">
-              <caret line="19" column="33" lean-forward="true" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
+            <state relative-caret-position="360">
+              <caret line="24" column="73" lean-forward="true" selection-start-line="24" selection-start-column="73" selection-end-line="24" selection-end-column="73" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -29,10 +37,20 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="bbdd.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/python/assets/bbdd.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="21" column="33" lean-forward="true" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="exect.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/python/exect.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="325">
+            <state relative-caret-position="195">
               <caret line="14" column="44" lean-forward="false" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
               <folding />
             </state>
@@ -42,8 +60,8 @@
       <file leaf-file-name="Trys.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/python/utils/Trys.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="60" column="0" lean-forward="true" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+            <state relative-caret-position="900">
+              <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
               <folding>
                 <element signature="e#36#82#0" expanded="true" />
               </folding>
@@ -54,7 +72,7 @@
       <file leaf-file-name="try2.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/python/utils/try2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1611">
+            <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
@@ -66,24 +84,10 @@
       <file leaf-file-name="Login.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/python/identificator/Login.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1400">
-              <caret line="56" column="16" lean-forward="true" selection-start-line="56" selection-start-column="16" selection-end-line="56" selection-end-column="16" />
+            <state relative-caret-position="795">
+              <caret line="56" column="16" lean-forward="false" selection-start-line="56" selection-start-column="16" selection-end-line="56" selection-end-column="16" />
               <folding>
                 <element signature="e#0#34#0" expanded="true" />
-                <marker date="1496459124501" expanded="true" signature="461:523" ph="select id, u... users" />
-                <marker date="1496459124501" expanded="true" signature="1018:1074" ph="insert into users... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Window.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/python/identificator/Window.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1479">
-              <caret line="44" column="13" lean-forward="true" selection-start-line="44" selection-start-column="13" selection-end-line="44" selection-end-column="13" />
-              <folding>
-                <element signature="e#16#26#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -92,7 +96,7 @@
       <file leaf-file-name="User_pers.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/python/identificator/User_pers.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-562">
+            <state relative-caret-position="150">
               <caret line="10" column="12" lean-forward="false" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
               <folding>
                 <element signature="e#38#68#0" expanded="true" />
@@ -101,26 +105,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Connection.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/python/utils/Connection.py">
+      <file leaf-file-name="Process_monitor.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/python/threads/Process_monitor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="650">
-              <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="555">
+              <caret line="38" column="11" lean-forward="false" selection-start-line="38" selection-start-column="11" selection-end-line="38" selection-end-column="11" />
+              <folding>
+                <marker date="1496653479000" expanded="true" signature="119:145" ph="INSERT INTO process... " />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Base_monitor.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Base_monitor.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/python/utils/Base_monitor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2651">
-              <caret line="114" column="26" lean-forward="true" selection-start-line="114" selection-start-column="26" selection-end-line="114" selection-end-column="26" />
+            <state relative-caret-position="97">
+              <caret line="20" column="23" lean-forward="false" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
               <folding>
-                <marker date="1496457409342" expanded="true" signature="334:395" ph="Insert into pcs... " />
-                <marker date="1496457409342" expanded="true" signature="582:652" ph="select id fr... pcs" />
-                <marker date="1496457409342" expanded="true" signature="839:909" ph="INSERT INTO pc_data... " />
-                <marker date="1496457409342" expanded="true" signature="2598:2670" ph="select id fr... pcs" />
+                <marker date="1496654819000" expanded="true" signature="304:365" ph="Insert into pcs... " />
+                <marker date="1496654819000" expanded="true" signature="552:622" ph="select id fr... pcs" />
+                <marker date="1496654819000" expanded="true" signature="809:879" ph="INSERT INTO pc_data... " />
+                <marker date="1496654819000" expanded="true" signature="2458:2530" ph="select id fr... pcs" />
               </folding>
             </state>
           </provider>
@@ -139,6 +145,7 @@
     <findStrings>
       <find>get_connect</find>
       <find>get_conn</find>
+      <find>close_connection</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -150,22 +157,22 @@
         <option value="$PROJECT_DIR$/python/exect.py" />
         <option value="$PROJECT_DIR$/python/User.txt" />
         <option value="$PROJECT_DIR$/python/threads/Process.py" />
-        <option value="$PROJECT_DIR$/python/assets/bbdd.sql" />
         <option value="$PROJECT_DIR$/python/utils/Trys.py" />
         <option value="$PROJECT_DIR$/python/utils/Crypter.py" />
         <option value="$PROJECT_DIR$/python/utils/Test.py" />
         <option value="$PROJECT_DIR$/python/Test.py" />
         <option value="$PROJECT_DIR$/python/utils/Encryptor.py" />
         <option value="$PROJECT_DIR$/python/identificator/User_pers.py" />
-        <option value="$PROJECT_DIR$/python/Main.py" />
         <option value="$PROJECT_DIR$/python/threads/Cpu_monitor.py" />
         <option value="$PROJECT_DIR$/python/threads/Disk_monitor.py" />
         <option value="$PROJECT_DIR$/python/threads/Process_monitor.py" />
         <option value="$PROJECT_DIR$/python/threads/Ram_monitor.py" />
-        <option value="$PROJECT_DIR$/python/utils/Base_monitor.py" />
         <option value="$PROJECT_DIR$/python/threads/Network_monitor.py" />
         <option value="$PROJECT_DIR$/python/identificator/Window.py" />
         <option value="$PROJECT_DIR$/python/identificator/Login.py" />
+        <option value="$PROJECT_DIR$/python/Main.py" />
+        <option value="$PROJECT_DIR$/python/utils/Base_monitor.py" />
+        <option value="$PROJECT_DIR$/python/assets/bbdd.sql" />
         <option value="$PROJECT_DIR$/python/utils/Connection.py" />
       </list>
     </option>
@@ -177,8 +184,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-9" />
-    <option name="y" value="-9" />
+    <option name="x" value="378" />
+    <option name="y" value="107" />
     <option name="width" value="1938" />
     <option name="height" value="1098" />
   </component>
@@ -197,27 +204,27 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="PROYECTO_GITHUB_REPO" />
+              <option name="myItemId" value="Repo_github" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="PROYECTO_GITHUB_REPO" />
+              <option name="myItemId" value="Repo_github" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="PROYECTO_GITHUB_REPO" />
+              <option name="myItemId" value="Repo_github" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="PROYECTO_GITHUB_REPO" />
+              <option name="myItemId" value="Repo_github" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -227,11 +234,11 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="PROYECTO_GITHUB_REPO" />
+              <option name="myItemId" value="Repo_github" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="PROYECTO_GITHUB_REPO" />
+              <option name="myItemId" value="Repo_github" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -245,11 +252,11 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="PROYECTO_GITHUB_REPO" />
+              <option name="myItemId" value="Repo_github" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="PROYECTO_GITHUB_REPO" />
+              <option name="myItemId" value="Repo_github" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -263,29 +270,11 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="PROYECTO_GITHUB_REPO" />
+              <option name="myItemId" value="Repo_github" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="PROYECTO_GITHUB_REPO" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="python" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="identificator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PROYECTO_GITHUB_REPO" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PROYECTO_GITHUB_REPO" />
+              <option name="myItemId" value="Repo_github" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -303,7 +292,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
   <component name="RecentsManager">
@@ -556,9 +545,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1098" extended-state="6" />
+    <frame x="378" y="107" width="1938" height="1098" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1745946" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13209495" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40949228" sideWeight="0.50216216" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -598,6 +588,79 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/python/utils/Trys.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="900">
+          <caret line="60" column="0" lean-forward="true" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+          <folding>
+            <element signature="e#36#82#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python/utils/try2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python/identificator/Login.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="795">
+          <caret line="56" column="16" lean-forward="true" selection-start-line="56" selection-start-column="16" selection-end-line="56" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python/identificator/Window.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="44" column="13" lean-forward="true" selection-start-line="44" selection-start-column="13" selection-end-line="44" selection-end-column="13" />
+          <folding>
+            <element signature="e#16#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python/identificator/User_pers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="10" column="12" lean-forward="false" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+          <folding>
+            <element signature="e#38#68#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python/utils/Base_monitor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1635">
+          <caret line="114" column="26" lean-forward="true" selection-start-line="114" selection-start-column="26" selection-end-line="114" selection-end-column="26" />
+          <folding>
+            <marker date="1496654819000" expanded="true" signature="304:365" ph="Insert into pcs... " />
+            <marker date="1496654819000" expanded="true" signature="552:622" ph="select id fr... pcs" />
+            <marker date="1496654819000" expanded="true" signature="809:879" ph="INSERT INTO pc_data... " />
+            <marker date="1496654819000" expanded="true" signature="2458:2530" ph="select id fr... pcs" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python/utils/Connection.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/python/Main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -614,8 +677,6 @@
           <caret line="61" column="65" lean-forward="true" selection-start-line="61" selection-start-column="65" selection-end-line="61" selection-end-column="65" />
           <folding>
             <element signature="e#0#34#0" expanded="true" />
-            <marker date="1496459124501" expanded="true" signature="461:523" ph="select id, u... users" />
-            <marker date="1496459124501" expanded="true" signature="1018:1074" ph="insert into users... " />
           </folding>
         </state>
       </provider>
@@ -654,7 +715,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1725">
           <caret line="69" column="16" lean-forward="false" selection-start-line="69" selection-start-column="16" selection-end-line="69" selection-end-column="16" />
-          <folding />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -674,8 +737,6 @@
           <caret line="61" column="65" lean-forward="true" selection-start-line="61" selection-start-column="65" selection-end-line="61" selection-end-column="65" />
           <folding>
             <element signature="e#0#34#0" expanded="true" />
-            <marker date="1496459124501" expanded="true" signature="461:523" ph="select id, u... users" />
-            <marker date="1496459124501" expanded="true" signature="1018:1074" ph="insert into users... " />
           </folding>
         </state>
       </provider>
@@ -714,7 +775,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1725">
           <caret line="69" column="16" lean-forward="false" selection-start-line="69" selection-start-column="16" selection-end-line="69" selection-end-column="16" />
-          <folding />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -741,8 +804,6 @@
           <caret line="51" column="0" lean-forward="true" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
           <folding>
             <element signature="e#0#34#0" expanded="true" />
-            <marker date="1496459124501" expanded="true" signature="461:523" ph="select id, u... users" />
-            <marker date="1496459124501" expanded="true" signature="1018:1074" ph="insert into users... " />
           </folding>
         </state>
       </provider>
@@ -751,7 +812,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
           <caret line="4" column="20" lean-forward="false" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
-          <folding />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -786,7 +849,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
           <caret line="4" column="20" lean-forward="false" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
-          <folding />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -811,7 +876,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
           <caret line="4" column="20" lean-forward="false" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
-          <folding />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -823,21 +890,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/python/User.txt" />
-    <entry file="file://$PROJECT_DIR$/python/assets/bbdd.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1564">
-          <caret line="15" column="41" lean-forward="true" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/python/utils/testbyte.aa" />
     <entry file="file://$PROJECT_DIR$/python/Test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="250">
           <caret line="10" column="40" lean-forward="true" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -845,19 +902,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="46" column="11" lean-forward="false" selection-start-line="46" selection-start-column="11" selection-end-line="46" selection-end-column="11" />
-          <folding>
-            <marker date="1496457408993" expanded="true" signature="386:414" ph="INSERT INTO disk_stat... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/python/threads/Process_monitor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="38" column="11" lean-forward="false" selection-start-line="38" selection-start-column="11" selection-end-line="38" selection-end-column="11" />
-          <folding>
-            <marker date="1496457408728" expanded="true" signature="119:145" ph="INSERT INTO process... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -865,29 +909,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-136">
           <caret line="64" column="0" lean-forward="true" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
-          <folding>
-            <marker date="1496457409851" expanded="true" signature="236:263" ph="INSERT INTO net_stat... " />
-            <marker date="1496457409851" expanded="true" signature="289:324" ph="INSERT INTO net_details_stat... " />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/Program Files/Python36/Lib/site-packages/pymysql/connections.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="854" column="0" lean-forward="false" selection-start-line="854" selection-start-column="0" selection-end-line="854" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://C:/Program Files/Python36/Lib/site-packages/pymysql/connections.py" />
     <entry file="file://$PROJECT_DIR$/python/threads/Cpu_monitor.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="53" column="11" lean-forward="false" selection-start-line="53" selection-start-column="11" selection-end-line="53" selection-end-column="11" />
-          <folding>
-            <marker date="1496457409511" expanded="true" signature="237:264" ph="INSERT INTO cpu_stat... " />
-            <marker date="1496457409511" expanded="true" signature="290:325" ph="INSERT INTO cpu_details_stat... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -895,49 +924,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="350">
           <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#30#0" expanded="true" />
-            <marker date="1496457408858" expanded="true" signature="239:266" ph="INSERT INTO ram_stat... " />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/python/identificator/Window.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1479">
-          <caret line="44" column="13" lean-forward="true" selection-start-line="44" selection-start-column="13" selection-end-line="44" selection-end-column="13" />
+        <state relative-caret-position="630">
+          <caret line="44" column="13" lean-forward="false" selection-start-line="44" selection-start-column="13" selection-end-line="44" selection-end-column="13" />
           <folding>
             <element signature="e#16#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/python/utils/Base_monitor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2651">
-          <caret line="114" column="26" lean-forward="true" selection-start-line="114" selection-start-column="26" selection-end-line="114" selection-end-column="26" />
-          <folding>
-            <marker date="1496457409342" expanded="true" signature="334:395" ph="Insert into pcs... " />
-            <marker date="1496457409342" expanded="true" signature="582:652" ph="select id fr... pcs" />
-            <marker date="1496457409342" expanded="true" signature="839:909" ph="INSERT INTO pc_data... " />
-            <marker date="1496457409342" expanded="true" signature="2598:2670" ph="select id fr... pcs" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/python/Main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="19" column="33" lean-forward="true" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/python/exect.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
+        <state relative-caret-position="195">
           <caret line="14" column="44" lean-forward="false" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
           <folding />
         </state>
@@ -945,8 +947,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/python/utils/Trys.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="60" column="0" lean-forward="true" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+        <state relative-caret-position="900">
+          <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
           <folding>
             <element signature="e#36#82#0" expanded="true" />
           </folding>
@@ -955,7 +957,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/python/utils/try2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1611">
+        <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
@@ -967,25 +969,60 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="12" column="7" lean-forward="false" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/python/identificator/Login.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1400">
-          <caret line="56" column="16" lean-forward="true" selection-start-line="56" selection-start-column="16" selection-end-line="56" selection-end-column="16" />
+        <state relative-caret-position="795">
+          <caret line="56" column="16" lean-forward="false" selection-start-line="56" selection-start-column="16" selection-end-line="56" selection-end-column="16" />
           <folding>
             <element signature="e#0#34#0" expanded="true" />
-            <marker date="1496459124501" expanded="true" signature="461:523" ph="select id, u... users" />
-            <marker date="1496459124501" expanded="true" signature="1018:1074" ph="insert into users... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python/assets/bbdd.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="33" lean-forward="true" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python/Main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="73" lean-forward="true" selection-start-line="24" selection-start-column="73" selection-end-line="24" selection-end-column="73" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python/threads/Process_monitor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="38" column="11" lean-forward="false" selection-start-line="38" selection-start-column="11" selection-end-line="38" selection-end-column="11" />
+          <folding>
+            <marker date="1496653479000" expanded="true" signature="119:145" ph="INSERT INTO process... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python/utils/Connection.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="815">
+          <caret line="91" column="0" lean-forward="true" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/python/identificator/User_pers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-562">
+        <state relative-caret-position="150">
           <caret line="10" column="12" lean-forward="false" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
           <folding>
             <element signature="e#38#68#0" expanded="true" />
@@ -993,11 +1030,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/python/utils/Connection.py">
+    <entry file="file://$PROJECT_DIR$/python/utils/Base_monitor.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="650">
-          <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="97">
+          <caret line="20" column="23" lean-forward="false" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
+          <folding>
+            <marker date="1496654819000" expanded="true" signature="304:365" ph="Insert into pcs... " />
+            <marker date="1496654819000" expanded="true" signature="552:622" ph="select id fr... pcs" />
+            <marker date="1496654819000" expanded="true" signature="809:879" ph="INSERT INTO pc_data... " />
+            <marker date="1496654819000" expanded="true" signature="2458:2530" ph="select id fr... pcs" />
+          </folding>
         </state>
       </provider>
     </entry>
