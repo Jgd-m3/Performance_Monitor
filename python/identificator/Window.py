@@ -92,13 +92,14 @@ class My_window:
 		self.parent = parent
 		self.mode = login
 		#tamanyo('ancho x alto + posx + posy')
-		self.window.geometry('500x300+100+100')
+		self.window.geometry('500x300+300+300')
 		str_mode = 'Login' if self.mode else 'Sign Up'
 		self.window.title(str_mode)
+		self.window.config(bg='black')
 
 		#etiqueta grid(fila y columna)
-		lbl_usr = Label(self.window, text='User: ').grid(row= 2, column =2, sticky=W)
-		lbl_pwd = Label(self.window, text='Pass: ').grid(row=4, column=2, sticky=W)
+		lbl_usr = Label(self.window, text='User: ', bg='black', fg='white').grid(row= 2, column =2, sticky=W)
+		lbl_pwd = Label(self.window, text='Pass: ', bg='black', fg='white').grid(row=4, column=2, sticky=W)
 
 		#txtfield
 		self.entrada_usr = StringVar()

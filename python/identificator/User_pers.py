@@ -1,7 +1,6 @@
 #test guardar usuario en archivo .txt
 import os.path as path, base64
 from identificator import Login
-
 class User:
 	"""
 	Class to retrieve the information of the user. If the user is saved it load directly.

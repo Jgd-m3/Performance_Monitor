@@ -1,15 +1,31 @@
+"""
 from identificator.Login import Login
 import bcrypt
-from utils import Encryptor
+from utils import Encryptor as encr
 
-log = Login('nana.m3')
+blabla = encr.Crypt().encrypt('nanana')
 
-blabla = bcrypt.hashpw(b'jijiji', bcrypt.gensalt(8))
+nene = encr.Crypt().comprove('nanana', blabla)
+print(nene)
+print(blabla)
 
-bleble = bcrypt.hashpw(b'jijiji', bcrypt.gensalt(8))
+"""
 
-print(bcrypt.checkpw(b'jijiji', bleble))
+from identificator import Window
 
-print(Encryptor.Crypt().comprove('jijiji', blabla.decode('utf-8')))
+class Test:
+
+    def __init__(self):
+        pass
 
 
+    def start(self):
+
+        win = Window.My_window(self, login= True)
+
+
+
+
+
+
+Test().start()
