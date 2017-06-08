@@ -19,9 +19,9 @@ def main():
         if looper_corrupt > 10 and (user is None or user < 0):
             os.remove(r'User.m3')
     print(user)
-    """
-    pc = insert_base_data(user)
 
+    pc = insert_base_data(user)
+    """
     hiloCpu = cpu_script.Cpu(args=(pc), name='cpu_monitor', daemon= True)
     hiloRam = ram_script.Ram(args=(pc), name='ram_monitor', daemon= True)
     hiloDisk = disk_script.Disk(args=(pc), name='disk_monitor', daemon=True)
