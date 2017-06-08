@@ -7,13 +7,13 @@ CREATE TABLE users (
 
 CREATE TABLE pcs (
   id        INTEGER AUTO_INCREMENT PRIMARY KEY ,
-  ref_user  INTEGER REFERENCES users(id),
+  ref_user  INTEGER FOREIGN KEY REFERENCES users(id),
   mac       VARCHAR(24), -- ya
   pc_name   VARCHAR(50) -- ya
 );
 
 CREATE TABLE pc_data (
-  ref_pc      INTEGER REFERENCES pcs(id),
+  ref_pc      INTEGER FOREIGN KEY REFERENCES pcs(id),
   ram         BIGINT,       -- ya
   cpu_name    VARCHAR(100), -- ya
   cores       TINYINT,    -- ya
@@ -26,7 +26,7 @@ CREATE TABLE pc_data (
 );
 
 CREATE TABLE cpu_stat (
-  ref_pc      INTEGER REFERENCES pcs(id),
+  ref_pc      INTEGER FOREIGN KEY REFERENCES pcs(id),
   user_us     DOUBLE,
   sys_us      DOUBLe,
   unused      DOUBLE,
@@ -35,7 +35,7 @@ CREATE TABLE cpu_stat (
   CONSTRAINT  PRIMARY KEY (ref_pc,date_stat)
 );
 CREATE TABLE cpu_details_stat (
-  ref_pc    INTEGER AUTO_INCREMENT REFERENCES pcs(id),
+  ref_pc    INTEGER AUTO_INCREMENT FOREIGN KEY REFERENCES pcs(id),
   num_cpu   INT(3),
   user_us   DOUBLE,
   sys_us    DOUBLe,
@@ -46,7 +46,7 @@ CREATE TABLE cpu_details_stat (
 );
 
 CREATE TABLE ram_stat (
-  ref_pc      INTEGER REFERENCES pcs(id),
+  ref_pc      INTEGER FOREIGN KEY  REFERENCES pcs(id),
   used        BIGINT,
   available   BIGINT,
   free        BIGINT,
@@ -56,7 +56,7 @@ CREATE TABLE ram_stat (
 );
 
 CREATE TABLE disk_stat (
-  ref_pc      INTEGER AUTO_INCREMENT REFERENCES pcs(id),
+  ref_pc      INTEGER AUTO_INCREMENT FOREIGN KEY REFERENCES pcs(id),
   disk_path   VARCHAR(30),
   used        BIGINT,
   free        BIGINT,
@@ -68,7 +68,7 @@ CREATE TABLE disk_stat (
 
 
 CREATE TABLE net_stat (
-  ref_pc      INTEGER REFERENCES pcs(id),
+  ref_pc      INTEGER FOREIGN KEY REFERENCES pcs(id),
   bytes_sent  BIGINT,
   bytes_recv  BIGINT,
   pack_sent   BIGINT,
@@ -80,7 +80,7 @@ CREATE TABLE net_stat (
 
 
 CREATE TABLE net_details_stat (
-  ref_pc      INTEGER REFERENCES pcs(id),
+  ref_pc      INTEGER FOREIGN KEY REFERENCES pcs(id),
   type_net    VARCHAR(150),
   bytes_sent  BIGINT,
   bytes_recv  BIGINT,
@@ -92,7 +92,7 @@ CREATE TABLE net_details_stat (
 
 
 CREATE TABLE process(
-  ref_pc      INTEGER REFERENCES pcs(id),
+  ref_pc      INTEGER FOREIGN KEY REFERENCES pcs(id),
   pid        INTEGER,
   proc_name   VARCHAR(80),
   date_stat   DATETIME,

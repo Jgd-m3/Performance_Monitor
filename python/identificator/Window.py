@@ -72,8 +72,8 @@ class My_window:
 
 	def _clean_inputs(self, nanana = False):
 		"""
-		Method to clean the pass field
-		:return: 
+		Method to clean the pass field or both fields of the Window
+		:param nanana: boolean to indicate if the username field needs be cleaned or not
 		"""
 		if nanana:
 			self.txt_usr.delete(0,END)
@@ -90,6 +90,7 @@ class My_window:
 		self.window = Tk()
 		self.window.transient()
 		self.parent = parent
+		
 		self.mode = login
 		#tamanyo('ancho x alto + posx + posy')
 		self.window.geometry('500x300+300+300')
@@ -97,6 +98,12 @@ class My_window:
 		self.window.title(str_mode)
 		self.window.config(bg='black')
 
+		
+		pic = PhotoImage(file='SM.gif')
+		lbl_pic = Label(self.window, image=pic)
+		lbl_pic.photo = pic
+		lbl_pic.pack()
+		
 		#etiqueta grid(fila y columna)
 		lbl_usr = Label(self.window, text='User: ', bg='black', fg='white').grid(row= 2, column =2, sticky=W)
 		lbl_pwd = Label(self.window, text='Pass: ', bg='black', fg='white').grid(row=4, column=2, sticky=W)
