@@ -101,7 +101,7 @@ class My_window:
 		self.window.config(bg='#000', padx=25, pady=25)
 
 
-		pic = PhotoImage(file='./../assets/SML.png')
+		pic = PhotoImage(file='./assets/SML.png')
 		# lbl_pic = Label(self.window, image=pic)
 		# lbl_pic.photo = pic
 		# lbl_pic.pack()
