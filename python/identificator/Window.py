@@ -100,8 +100,11 @@ class My_window:
 		self.window.title('Smart Monitor')
 		self.window.config(bg='#000', padx=25, pady=25)
 
+		try:
+			pic = PhotoImage(file='./assets/SML.png')
+		except:
+			pic = PhotoImage(file='./assets/SML.gif')
 
-		pic = PhotoImage(file='./assets/SML.png')
 		# lbl_pic = Label(self.window, image=pic)
 		# lbl_pic.photo = pic
 		# lbl_pic.pack()
