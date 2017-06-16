@@ -50,8 +50,10 @@ class Net(threading.Thread):
         if values is not None:
             sql = self._FIELDS_DETAILS
             sql += values
-            self.db.insert_into(sql)
-
+            try:
+                self.db.insert_into(sql)
+            except Exception:
+                print(Exception)
     def run(self):
         """
         Method to run the thread

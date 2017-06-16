@@ -11,8 +11,8 @@ class Login:
 
 	def __init__(self, path):
 		"""
-		constructor
-		:param path: 
+		constructor of Login's class
+		:param path: path of the file to save the data
 		"""
 		self.path = path
 		self.usr = None
@@ -21,6 +21,13 @@ class Login:
 
 
 	def select_user(self,usr, pwd, id = None ):
+		"""
+		Method to search the user using username and pw
+		:param usr: username
+		:param pwd: password
+		:param id: ID of the user (None by default)
+		:return: ID of the user
+		"""
 
 		if usr and pwd and id:
 			return id
@@ -60,7 +67,10 @@ class Login:
 
 
 	def register_user(self):
-
+		"""
+		Method to register the user
+		:return: 
+		"""
 		while True:
 			root = Tk()
 			root.withdraw()
@@ -78,7 +88,13 @@ class Login:
 		
 
 	def _save_data(self, id, usr, pwd):
-
+		"""
+		Private method to Save the data of the user in a file
+		:param id: id of user
+		:param usr: username
+		:param pwd: password
+		:return: 
+		"""
 		with open(self.path, 'wb') as file_output:
 			header = '[Cabesera Cabesona]:m3'.encode('utf-8')
 			uid_bin = id.to_bytes(16, byteorder='big', signed=True)
@@ -99,6 +115,13 @@ class Login:
 
 
 	def set_user_info(self, usr, pwd, id):
+		"""
+		Method to set the user info
+		:param usr: username	
+		:param pwd: password
+		:param id: ID of the user
+		:return: 
+		"""
 		self.usr = usr
 		self.pwd = pwd
 		self.id = id

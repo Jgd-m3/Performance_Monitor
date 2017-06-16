@@ -29,21 +29,6 @@ class DataBase:
             self.conn = pymysql.connect(host = self._host, user=self._usr,
                     passwd = self._psw, db = self._db)
 
-        """
-        _usr = 'managex'
-        _psw = 'M1dTYG73Fl'
-        _host = '192.168.1.81'
-        _db = 'tfc_monitor'
-    
-        def __init__(self):
-            self.conn = None
-    
-        def get_connection(self):
-            if self.conn is None:
-                self.conn = pymysql.connect(host = DataBase._host, user=DataBase._usr,
-                        passwd =DataBase._psw, db = DataBase._db)
-    
-        """
 
         def insert_into(self, query):
             self.__get_connection()
@@ -51,10 +36,12 @@ class DataBase:
             if query is None or len(query) == 0:
                 return
             try:
+                print(query)
                 with self.conn.cursor() as cursor:
                     num = cursor.execute(query)
                     self.conn.commit()
             except:
+
                 traceback.print_exc()
             finally:
                 self.__close_connection()
@@ -69,7 +56,7 @@ class DataBase:
                 with self.conn.cursor() as cursor:
                     cursor.execute(query)
                     rtn = cursor.fetchone()[0]
-            except:
+            except Exception:
                 rtn = None
             finally:
                 self.__close_connection()

@@ -2,6 +2,13 @@
 
 import psutil, codecs, platform, pymysql, time
 import urllib.request
+import Connection
+
+conn= Connection.DataBase()
+nana = conn.get_unique_id("select type_net from net_details_stat where ref_pc = 11 and type_net = 'isatap.{F454A02B-F3EE-4D03-9F36-B5FDFF922974}'")
+
+print(nana)
+
 """
 nanana = codecs.open('rdo_net.txt', 'a', 'utf-8')
 # nanana.write(codecs.BOM_UTF8)

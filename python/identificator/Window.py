@@ -80,7 +80,7 @@ class My_window:
 			self.txt_usr.delete(0,END)
 		self.txt_pwd.delete(0, END)
 
-	# atributes : window, parent, mode, entrada_usr entrada_pwd
+
 	def __init__(self, parent, login = False):
 		"""
 		Constructor of My_window
@@ -105,14 +105,11 @@ class My_window:
 		except:
 			pic = PhotoImage(file='./assets/SML.gif')
 
-		# lbl_pic = Label(self.window, image=pic)
-		# lbl_pic.photo = pic
-		# lbl_pic.pack()
 		container= Label(self.window, height=200, bg='#e6324b')
 		photo = Label(container, height=180, width=200, image=pic, bg='#000').pack()
 		container.place(x=200, y=10)
 		container.pack()
-		# photo.replace()
+
 		helvfont = font.Font(family="Helvetica", size=10, weight="bold")
 		title = Label(self.window, font=helvfont, text=str_mode.upper(), width=19, bg='#000' , fg='#e6324b').place(x=180, y=225)
 		#etiqueta grid(fila y columna)

@@ -8,6 +8,10 @@ from utils import Connection
 class Base:
 
     def register_pc(self ):
+        """
+        Method to register the pc
+        :return: id of pc
+        """
         
         conn = Connection.DataBase()
 
@@ -29,21 +33,27 @@ class Base:
         return rlt
 
     def update_pc(self, n_pc):
+        """
+        Method to update the pc Data
+        :param n_pc: id of pc
+        :return: 
+        """
+        conn = Connection.DataBase()
 
-        if self.need_update():
-
-            conn = Connection.DataBase()
-
-            sql = "UPDATE pc_data SET "
-            sql += "ram = {}, cpu_name = '{}', cores = {}, threads = {}, so = '{}', so_v = '{}',".format(
-                self.memory, self.cpu_name, self.cores, self.threads, self.so, self.so_name)
-            sql += " hdd= {}, ip_priv='{}', ip_pub = '{}'".format(
-                self.hdd, self.ip_priv, self.ip_pub)
-            sql += 'where ref_pc = {}'.format(n_pc)
-            conn.insert_into(sql)
+        sql = "UPDATE pc_data SET "
+        sql += "ram = {}, cpu_name = '{}', cores = {}, threads = {}, so = '{}', so_v = '{}',".format(
+            self.memory, self.cpu_name, self.cores, self.threads, self.so, self.so_name)
+        sql += " hdd= {}, ip_priv='{}', ip_pub = '{}'".format(
+            self.hdd, self.ip_priv, self.ip_pub)
+        sql += 'where ref_pc = {}'.format(n_pc)
+        conn.insert_into(sql)
 
 
     def __init__(self, num_user):
+        """
+        Constructor of the object Base
+        :param num_user: Id of user
+        """
         self.num_user = num_user
         self.cores = num_cpus(False)
         self.threads = num_cpus()
@@ -64,10 +74,12 @@ class Base:
         except:
             self.ip_pub = 'xxx.xxx.xxx.xxx'
 
-    def need_update(self):
-        return True
 
     def get_data_id(self):
+        """
+        Method to get the id of the pc
+        :return: id of pc
+        """
         sql = "select id from pcs where ref_user = {} and mac = '{}' and pc_name = '{}'".format(self.num_user,
                                                                                 self.mac, self.pc_name )
 
@@ -77,7 +89,10 @@ class Base:
         return id_pc
 
     def get_hd_size(self):
-
+        """
+        method to get the total HD size
+        :return: size of HD in bytes
+        """
         rdo = 0
         for n in psutil.disk_partitions():
             if (n.opts).find('fixed') != -1 or (n.opts).find('local') != -1:
@@ -86,7 +101,11 @@ class Base:
         return rdo
 
     def get_mac_format(self, input):
-
+        """
+        method to get the mac address with legible format
+        :param input: mac
+        :return: mac in hex
+        """
         input = input[2:].upper()
         n = []
 
@@ -98,7 +117,10 @@ class Base:
         return ''.join(n)[1:]
 
     def get_so(self):
-
+        """
+        method to get the SO's name
+        :return: name of SO
+        """
         if psutil.WINDOWS:
             return 'Windows'
         elif psutil.LINUX:
