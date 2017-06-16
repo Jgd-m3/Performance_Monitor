@@ -3,6 +3,7 @@
 import sys
 from tkinter import *
 from tkinter import messagebox
+from tkinter import font
 
 
 class My_window:
@@ -34,7 +35,7 @@ class My_window:
 				uid = -3
 
 		if uid is None:
-			messagebox.showinfo('ERROR', 'Your user doesnt exist')
+			messagebox.showinfo('ERROR', 'Your user doesn`t exist')
 			self.window.destroy()
 		elif uid == -2:
 			messagebox.showinfo('ERROR', 'That password is incorrect')
@@ -43,7 +44,7 @@ class My_window:
 			messagebox.showinfo('ERROR', 'That user is already registered')
 			self._clean_inputs(True)
 		else:
-			messagebox.showinfo('holis', 'Has logeao HDP > {} < '.format(usr))
+			messagebox.showinfo('SUCCESS', 'Login Success {}'.format(usr))
 			self.parent.set_user_info(usr, pwd, uid)
 			self.window.destroy()
 
@@ -89,34 +90,41 @@ class My_window:
 		#creamos ventana
 		self.window = Tk()
 		self.window.transient()
+		self.window.resizable(FALSE, FALSE)
 		self.parent = parent
 		
 		self.mode = login
 		#tamanyo('ancho x alto + posx + posy')
-		self.window.geometry('500x300+300+300')
+		self.window.geometry('600x500+300+200')
 		str_mode = 'Login' if self.mode else 'Sign Up'
-		self.window.title(str_mode)
-		self.window.config(bg='black')
+		self.window.title('Smart Monitor')
+		self.window.config(bg='#000', padx=25, pady=25)
 
-		
-		pic = PhotoImage(file='SM.gif')
-		lbl_pic = Label(self.window, image=pic)
-		lbl_pic.photo = pic
-		lbl_pic.pack()
-		
+
+		pic = PhotoImage(file='./../assets/SML.png')
+		# lbl_pic = Label(self.window, image=pic)
+		# lbl_pic.photo = pic
+		# lbl_pic.pack()
+		container= Label(self.window, height=200, bg='#e6324b')
+		photo = Label(container, height=180, width=200, image=pic, bg='#000').pack()
+		container.place(x=200, y=10)
+		container.pack()
+		# photo.replace()
+		helvfont = font.Font(family="Helvetica", size=10, weight="bold")
+		title = Label(self.window, font=helvfont, text=str_mode.upper(), width=19, bg='#000' , fg='#e6324b').place(x=180, y=225)
 		#etiqueta grid(fila y columna)
-		lbl_usr = Label(self.window, text='User: ', bg='black', fg='white').grid(row= 2, column =2, sticky=W)
-		lbl_pwd = Label(self.window, text='Pass: ', bg='black', fg='white').grid(row=4, column=2, sticky=W)
+		lbl_usr = Label(self.window, text='User: ', bg='#000', font=helvfont, fg='#e6324b').place(x=125, y=280)
+		lbl_pwd = Label(self.window, text='Pass: ', bg='#000', font=helvfont, fg='#e6324b').place(x=125, y=320)
+
 
 		#txtfield
 		self.entrada_usr = StringVar()
 		self.entrada_pwd = StringVar()
 		self.txt_usr = Entry(self.window, textvariable = self.entrada_usr)
 		self.txt_pwd = Entry(self.window, show = '*', textvariable = self.entrada_pwd)
-		self.txt_usr.grid(row =2, column =3)
-		self.txt_pwd.grid(row =4, column =3)
-
-		bnt_login = Button(self.window, text=str_mode, width=10, command=self.ok_button).grid(row=10, column=2)
+		self.txt_usr.place(x=220, y=280)
+		self.txt_pwd.place(x=220, y=320)
+		bnt_login = Button(self.window, text=str_mode, font=helvfont, width=19, command=self.ok_button,fg='#fff', bg='#e6324b').place(x=180, y=390)
 
 		self.window.mainloop()
 

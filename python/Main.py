@@ -21,7 +21,7 @@ def main():
     print(user)
 
     pc = insert_base_data(user)
-    """
+
     hiloCpu = cpu_script.Cpu(args=(pc), name='cpu_monitor', daemon= True)
     hiloRam = ram_script.Ram(args=(pc), name='ram_monitor', daemon= True)
     hiloDisk = disk_script.Disk(args=(pc), name='disk_monitor', daemon=True)
@@ -39,7 +39,7 @@ def main():
     hiloDisk.join()
     hiloNet.join()
     hiloProc.join()
-    """
+
     print('han terminao los daemons')
 
 

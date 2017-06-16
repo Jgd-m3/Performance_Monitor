@@ -13,7 +13,10 @@ print(blabla)
 
 from identificator import Window
 import psutil as ps
-
+from urllib.request import urlopen
+from json import load
+import ssl
+from tkinter import Tk, messagebox
 class Test:
 
     def __init__(self):
@@ -33,9 +36,12 @@ class Test:
         # print('ram bacho: {}GB / HD : {}GB'.format(round(ram_bacho/(2**30),2),round(hd_b/2**30,2)))
         win = Window.My_window(self, login= True)
 
-
-
-
-
+        # context = ssl._create_unverified_context()
+        #
+        # try:
+        #     self.ip_pub = load(urlopen('http://jsonip.com', context=context))['ip']
+        # except:
+        #     self.ip_pub = 'xxx.xxx.xxx.xxx'
+        # print(self.ip_pub)
 
 Test().start()

@@ -64,7 +64,7 @@ class Login:
 		while True:
 			root = Tk()
 			root.withdraw()
-			answer = messagebox.askyesno('Question?', 'Have you got an Account??')
+			answer = messagebox.askyesno('Question?', 'Have you got an Account??', default='no')
 			root.destroy()
 
 			time.sleep(0.2)

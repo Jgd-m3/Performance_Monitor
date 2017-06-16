@@ -59,7 +59,10 @@ class Base:
         self.hdd = self.get_hd_size()
         self.mac = self.get_mac_format(hex(get_mac()))
         context = ssl._create_unverified_context()
-        self.ip_pub = load(urlopen('http://jsonip.com', context=context))['ip']
+        try:
+            self.ip_pub = load(urlopen('http://jsonip.com', context=context))['ip']
+        except:
+            self.ip_pub = 'xxx.xxx.xxx.xxx'
 
     def need_update(self):
         return True
