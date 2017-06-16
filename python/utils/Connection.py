@@ -36,7 +36,7 @@ class DataBase:
             if query is None or len(query) == 0:
                 return
             try:
-                print(query)
+                # print(query)
                 with self.conn.cursor() as cursor:
                     num = cursor.execute(query)
                     self.conn.commit()

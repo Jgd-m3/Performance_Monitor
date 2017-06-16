@@ -2,18 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="66f2f0d2-92c4-40d2-944a-cd913c74997e" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/python/Test.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/python/Tests.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/python/utils/NEXT.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/python/utils/Trys.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/python/utils/rdo_net.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/python/utils/try2.py" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/python/Main.py" afterPath="$PROJECT_DIR$/python/Main.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/python/identificator/Login.py" afterPath="$PROJECT_DIR$/python/identificator/Login.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/python/identificator/Window.py" afterPath="$PROJECT_DIR$/python/identificator/Window.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/python/threads/Network_monitor.py" afterPath="$PROJECT_DIR$/python/threads/Network_monitor.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/python/utils/Base_monitor.py" afterPath="$PROJECT_DIR$/python/utils/Base_monitor.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/python/utils/Connection.py" afterPath="$PROJECT_DIR$/python/utils/Connection.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -42,15 +30,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Network_monitor.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Network_monitor.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/python/threads/Network_monitor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
+            <state relative-caret-position="1368">
               <caret line="77" column="0" lean-forward="true" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
               <folding>
                 <marker date="1497657314555" expanded="true" signature="236:263" ph="INSERT INTO net_stat... " />
                 <marker date="1497657314555" expanded="true" signature="289:324" ph="INSERT INTO net_details_stat... " />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Connection.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/python/utils/Connection.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="355">
+              <caret line="39" column="25" lean-forward="true" selection-start-line="39" selection-start-column="25" selection-end-line="39" selection-end-column="25" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -93,12 +91,12 @@
         <option value="$PROJECT_DIR$/python/assets/bbdd.sql" />
         <option value="$PROJECT_DIR$/python/Test.py" />
         <option value="$PROJECT_DIR$/python/utils/Trys.py" />
-        <option value="$PROJECT_DIR$/python/utils/Connection.py" />
         <option value="$PROJECT_DIR$/python/utils/Base_monitor.py" />
         <option value="$PROJECT_DIR$/python/identificator/Login.py" />
         <option value="$PROJECT_DIR$/python/identificator/Window.py" />
         <option value="$PROJECT_DIR$/python/Main.py" />
         <option value="$PROJECT_DIR$/python/threads/Network_monitor.py" />
+        <option value="$PROJECT_DIR$/python/utils/Connection.py" />
       </list>
     </option>
   </component>
@@ -154,6 +152,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="python" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PROYECTO_GITHUB_REPO" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PROYECTO_GITHUB_REPO" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="python" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="utils" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -448,14 +464,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1098" extended-state="6" />
+    <frame x="-9" y="-9" width="1938" height="1098" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2064865" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32896462" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40949228" sideWeight="0.50216216" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3222958" sideWeight="0.49783784" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3222958" sideWeight="0.49783784" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32896462" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.9252949" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5972789" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -762,14 +778,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/python/utils/Connection.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="700">
-          <caret line="29" column="54" lean-forward="false" selection-start-line="29" selection-start-column="54" selection-end-line="29" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/python/utils/Encryptor.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="325">
@@ -881,12 +889,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/python/threads/Network_monitor.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
+        <state relative-caret-position="1368">
           <caret line="77" column="0" lean-forward="true" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
           <folding>
             <marker date="1497657314555" expanded="true" signature="236:263" ph="INSERT INTO net_stat... " />
             <marker date="1497657314555" expanded="true" signature="289:324" ph="INSERT INTO net_details_stat... " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python/utils/Connection.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="39" column="25" lean-forward="true" selection-start-line="39" selection-start-column="25" selection-end-line="39" selection-end-column="25" />
+          <folding />
         </state>
       </provider>
     </entry>
