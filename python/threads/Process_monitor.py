@@ -5,6 +5,9 @@ from utils import Connection
 
 
 class Process(threading.Thread):
+    """
+    Class Process to save the data of the process in the DB
+    """
 
     _FIELDS_PROCS = "INSERT INTO process VALUES "
 

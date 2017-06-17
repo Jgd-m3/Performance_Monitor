@@ -34,23 +34,23 @@ class Main:
 
         pc = self._insert_base_data(user)
 
-        # hiloCpu = cpu_script.Cpu(args=(pc), name='cpu_monitor', daemon= True)
-        # hiloRam = ram_script.Ram(args=(pc), name='ram_monitor', daemon= True)
-        # hiloDisk = disk_script.Disk(args=(pc), name='disk_monitor', daemon=True)
+        hiloCpu = cpu_script.Cpu(args=(pc), name='cpu_monitor', daemon= True)
+        hiloRam = ram_script.Ram(args=(pc), name='ram_monitor', daemon= True)
+        hiloDisk = disk_script.Disk(args=(pc), name='disk_monitor', daemon=True)
         hiloNet = net_script.Net(args=(pc), name='net_monitor', daemon= True)
-        # hiloProc = proc_script.Process(args=(pc), name='proc_monitor', daemon= True)
-        #
-        # hiloCpu.start()
-        # hiloRam.start()
-        # hiloDisk.start()
+        hiloProc = proc_script.Process(args=(pc), name='proc_monitor', daemon= True)
+
+        hiloCpu.start()
+        hiloRam.start()
+        hiloDisk.start()
         hiloNet.start()
-        # hiloProc.start()
-        #
-        # hiloCpu.join()
-        # hiloRam.join()
-        # hiloDisk.join()
+        hiloProc.start()
+
+        hiloCpu.join()
+        hiloRam.join()
+        hiloDisk.join()
         hiloNet.join()
-        # hiloProc.join()
+        hiloProc.join()
 
         print('han terminao los daemons')
 
