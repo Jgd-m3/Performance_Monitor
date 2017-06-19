@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import socket, psutil
 from urllib.request import urlopen
 from json import load

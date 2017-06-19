@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 from uuid import getnode as get_mac
 import psutil, socket, platform, ssl
 from psutil import cpu_count as num_cpus

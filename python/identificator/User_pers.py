@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 #test guardar usuario en archivo .txt
 import os.path as path, base64
 from identificator import Login

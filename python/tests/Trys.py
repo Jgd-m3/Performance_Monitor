@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 ## script de testeo   -  TO-DELETE
 
 import psutil, codecs, platform, pymysql, time

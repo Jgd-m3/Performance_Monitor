@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 from identificator import User_pers
 import utils.Base_monitor as base_script
 import threads.Cpu_monitor as cpu_script

@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 """
 from identificator.Login import Login
 import bcrypt

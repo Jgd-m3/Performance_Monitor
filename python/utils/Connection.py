@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import pymysql, traceback
 from threading import Lock
 

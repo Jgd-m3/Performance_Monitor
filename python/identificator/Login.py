@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 from tkinter import Tk, messagebox
 from identificator import Window
 from utils import Connection, Encryptor

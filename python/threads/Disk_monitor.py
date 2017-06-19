@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 # Clase Disc hereda de la clase Thread para realizar la recopilacion y almacenamiento de datos del uso del Disc
 # de momento almacena en un Log
 
